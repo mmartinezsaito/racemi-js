@@ -1,0 +1,61 @@
+<html>
+<title>Racemi in 2D</title>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            color-scheme: dark;
+            --canvas-bg-color: rgba(0, 0, 0, 0); /* transparent */
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #mycanvas {
+            border: hsl(0 0% 30%);/*  #999999; #504e52 */
+            border-style: solid; /* ridge, dashed */
+            border-width: 5;
+            outline: none;  /* because of the 'tabindex' focus trick */
+            background-color: var(--canvas-bg-color);  
+        }
+    </style>
+
+    <!-- lilgui -->
+    <!--script src="https://cdn.jsdelivr.net/npm/lil-gui@0.17"></script-->
+    <script src="lilgui.js"></script>
+    
+    <!-- Plotly -->
+    <!--script src="https://cdn.plot.ly/plotly-2.20.0.min.js" charset="utf-8"></script-->
+    <script src="plotly-2.20.0.min.js" charset="utf-8"></script>
+
+    <!-- SVD-JS -->
+    <!--script src="https://unpkg.com/svd-js" type="application/javascript"></script-->
+    <script src="svd-js.js" ></script>
+    <!--script src="svd.js" type="module"></script-->
+
+    <!-- math.js -->
+    <script src="math.js" type="text/javascript"></script>
+
+    <!-- FileSaver.js -->
+    <script src="FileSaver.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <!-- 'tabindex' is a trick to make the canvas capture key events -->
+    <canvas id="mycanvas" tabindex="1"></canvas>
+    
+    <div id="fig01" style="width:600px;height:600px;"></div>
+
+    <script>
+	    console.log(document.getElementById("mycanvas"));
+    </script>
+
+    <!-- main file -->
+    <script src="racemi2.js" type="text/javascript"></script>
+
+</body>
+
+</html>
